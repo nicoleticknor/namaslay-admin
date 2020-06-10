@@ -3,22 +3,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
 
-  &__left-panel {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    // grid-row-start: 1;
-    // grid-row-end: 3;
-    background-color: red;
-  }
   &__middle-panel-1 {
     height: 100vh;
     display: grid;
     grid-template-rows: 25% 50% 25%;
     background-color: green;
-
   }
 
   &__middle-panel-2 {
@@ -32,10 +21,6 @@
       display: grid;
       grid-template-rows: 25% 50% 25%;
       background-color: turquoise;
-
-  }
-  .LargeDataBox2 {
-
   }
   &__right-panel-2 {
     height: 100vh;
@@ -43,5 +28,4 @@
     grid-template-rows: 25% 50% 25%;
   background-color: yellow;
 }
-
 }

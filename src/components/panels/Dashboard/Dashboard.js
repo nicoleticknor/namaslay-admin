@@ -1,49 +1,11 @@
-import React from 'react';
+import React from 'react'
 import './Dashboard.scss'
-import NavBox from '../components/boxes/NavBox/NavBox'
-import SmallDataBox from '../components/boxes/SmallDataBox/SmallDataBox'
-import LargeDataBox from '../components/boxes/LargeDataBox/LargeDataBox'
+import SmallDataBox from '../../boxes/SmallDataBox/SmallDataBox'
+import LargeDataBox from '../../boxes/LargeDataBox/LargeDataBox'
 
-function Dashboard() {
-
+function Dashboard(props) {
   return (
-
     <div className="Dashboard">
-      <div className="Dashboard__left-panel">
-        <NavBox
-          text='NavBox1'
-        />
-        <NavBox
-          text='NavBox2'
-        />
-        <NavBox
-          text='NavBox3'
-        />
-        <NavBox
-          text='NavBox4'
-        />
-        <NavBox
-          text='NavBox5'
-        />
-        <NavBox
-          text='NavBox6'
-        />
-        <NavBox
-          text='NavBox7'
-        />
-        <NavBox
-          text='NavBox8'
-        />
-        <NavBox
-          text='NavBox10'
-        />
-        <NavBox
-          text='NavBox11'
-        />
-        <NavBox
-          text='NavBox12'
-        />
-      </div>
       <div className="Dashboard__middle-panel-1">
         <SmallDataBox
           text='SmallDataBox1'
@@ -85,8 +47,8 @@ function Dashboard() {
           text='SmallDataBox8'
         />
       </div>
-
     </div>
   )
 }
+
 export default Dashboard

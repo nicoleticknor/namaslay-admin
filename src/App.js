@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Dashboard from './pages/Dashboard'
+import Landing from './pages/Landing/Landing'
 
 function App() {
   return (
-    <Dashboard />
+    <Landing />
   );
 }
 

@@ -1,0 +1,15 @@
+.Landing {
+  display: grid;
+  grid-template-columns: 33% 67%;
+
+  &__nav-panel {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: red;
+  }
+  &__view-panel {
+    height: 100vh;
+    background-color: green;
+  }
+}
