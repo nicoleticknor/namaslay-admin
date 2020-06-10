@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Landing.scss'
 import NavBox from '../../components/boxes/NavBox/NavBox'
 import Dashboard from '../../components/panels/Dashboard/Dashboard'
+import ClassesPanel from '../../components/panels/ClassesPanel/ClassesPanel'
+import ProgramsPanel from '../../components/panels/ProgramsPanel/ProgramsPanel'
+import TeachersPanel from '../../components/panels/TeachersPanel/TeachersPanel'
 
 function Landing() {
 
@@ -19,21 +22,25 @@ function Landing() {
   }
   const handleShowPrograms = () => {
     showProgramsHandler(!showPrograms)
+    showClassesHandler(false)
     showTeachersHandler(false)
     showDashboardHandler(false)
     console.log(showPrograms);
   }
   const handleShowTeachers = () => {
     showTeachersHandler(!showTeachers)
+    showClassesHandler(false)
     showProgramsHandler(false)
     showDashboardHandler(false)
     console.log(showTeachers);
   }
 
   const handleShowDashboard = () => {
-    showTeachersHandler(!showTeachers)
+    showDashboardHandler(true)
+    showTeachersHandler(false)
+    showClassesHandler(false)
     showProgramsHandler(false)
-    console.log(showTeachers);
+    console.log(showDashboard);
   }
 
   return (
@@ -44,7 +51,8 @@ function Landing() {
           text='Logout Button'
         />
         <NavBox
-          text='Settings Button'
+          text='View Dashboard'
+          onClick={handleShowDashboard}
         />
         <NavBox
           text='Edit Classes'
@@ -59,7 +67,7 @@ function Landing() {
           onClick={handleShowTeachers}
         />
         <NavBox
-          text='NavBox6'
+          text='Settings Button'
         />
         <NavBox
           text='NavBox7'
@@ -78,7 +86,10 @@ function Landing() {
         />
       </div>
       <div className="Landing__view-panel">
-        <Dashboard />
+        {showDashboard && <Dashboard />}
+        {showClasses && <ClassesPanel />}
+        {showPrograms && <ProgramsPanel />}
+        {showTeachers && <TeachersPanel />}
       </div>
     </div>
   )

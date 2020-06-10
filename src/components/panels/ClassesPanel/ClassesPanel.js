@@ -1,10 +1,10 @@
 import React from 'react'
 import './ClassesPanel.scss'
 
-function ClassesPanel() {
+function ClassesPanel(props) {
 
   return (
-    <div>Hello</div>
+    <div className="ClassesPanel">ClassesPanel</div>
   )
 }
 
