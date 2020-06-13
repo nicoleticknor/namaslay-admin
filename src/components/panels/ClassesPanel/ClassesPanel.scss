@@ -1,3 +1,45 @@
-.Schedule {
-  
+.ClassesPanel {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 20% 80%;
+
+  &__Title {
+    //need to center
+
+  }
+
+  &__Calendar {
+    //need to center middle
+    grid-row-start: 2;
+   
+  }
+
+  &__Details {
+    grid-row-start: 2;
+
+    &__Schedule {
+
+      border: solid black;
+    
+      &-slot1 {
+        display: flex;
+        justify-content: space-evenly;
+        background: pink;
+
+        .AddItemButton {
+        }
+
+      }
+
+      &-slot2 {
+        background: purple;
+        display: flex;
+        justify-content: space-evenly;
+
+        .AddItemButton {
+
+        }
+      }
+    }
+  }
 }
