@@ -87,7 +87,8 @@ function Landing() {
       </div>
       <div className="Landing__view-panel">
         {showDashboard && <Dashboard />}
-        {showClasses && <ClassesPanel />}
+        {showClasses && <ClassesPanel
+          title="CLASSES" />}
         {showPrograms && <ProgramsPanel />}
         {showTeachers && <TeachersPanel />}
       </div>
